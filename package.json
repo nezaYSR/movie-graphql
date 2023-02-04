@@ -1,0 +1,60 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn ./src/server.ts",
+    "typeorm": "typeorm-ts-node-esm",
+    "test": "jest --watchAll --no-cache"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/__test__/setup.ts"
+    ]
+  },
+  "keywords": [],
+  "author": "Neza YSR, https://nezaysr.tech",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^9.0.15",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "express-session": "^1.17.3",
+    "graphql": "^15.8.0",
+    "graphql-tools": "^8.3.17",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.4.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node-dev": "^2.0.0",
+    "typeorm": "0.3.11",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cookie-session": "^2.0.44",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.16",
+    "@types/jest": "^29.4.0",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/node": "^16.11.10",
+    "@types/supertest": "^2.0.12",
+    "@types/uuid": "^9.0.0",
+    "jest": "^29.4.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5",
+    "ts-node": "10.7.0",
+    "typescript": "4.5.2"
+  }
+}

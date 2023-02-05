@@ -3,6 +3,7 @@ import cors from "cors";
 import routes from "./routes";
 import "reflect-metadata";
 import cookieSession from "cookie-session";
+import path from "path";
 
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -21,13 +22,11 @@ app.use(cors());
 app.use(routes);
 
 app.get("/graphql", (req, res) => {
-  res.status(201).send(
-    `
-      Hello this is Movie GraphQL made by Neza Yasser, please login first, admin (username:"admin", password:"admin") \n
-       <button style="background-color: blue;"><a href="/graphiql" target="_blank" style="color: white;">  Go to Graphiql </a></button> or 
-       <button style="background-color: green;"><a href="nezaysr.tech" target="_blank" style="color: white;">  Go to nezaysr.tech </a></button>
-       `
-  );
+  res.sendFile(path.join(__dirname + "/render/" + "/index.html"));
+});
+
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname + "/render/" + "/about.html"));
 });
 
 export { app };

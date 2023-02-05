@@ -14,6 +14,8 @@ export const RootMutationType = new GraphQLObjectType({
     // New user please check inbox
     loginUser: authMutations.userSignin,
     logoutUser: authMutations.userSignout,
+    // User see their inbox
+    seeInbox: userMutations.seeInbox,
     // User Changing password
     changePassword: userMutations.changePassword,
     // Author Mutations only for admin or admin-support

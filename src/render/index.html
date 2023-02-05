@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <title>GraphQL Movie API - Made by nezaysr</title>
+    <meta
+      name="description"
+      content="Discover the latest and greatest movies with our GraphQL Movie API. Get detailed information, ratings, and reviews for your favorite films."
+    />
+    <meta
+      name="keywords"
+      content="GraphQL, movie API, movies, film database, ratings, reviews"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div style="margin:100px;" class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <a class="navbar-brand" href="/graphql">Movie GraphQL Home</a>
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="/graphql">Home</a>
+              </li>
+              <li>
+                <a href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+            <div class="jumbotron"  style="padding:40px;">
+              <h1>Getting Started</h1>
+              <p  style="margin-top: 30px;">Welcome to the Movie GraphQL! Here, you can store movies, actors, and authors. You can view the list of movies, actors, and authors without logging in. However, to see their details, you will need to log in.</p>
+              <p>You can create a user account using an admin account. For demonstration purposes, here are the credentials:</p>
+              <div class="div" style="width:400px; text-align: center; border-radius: 15px; padding: 5px; background: rgba(251, 247, 44, 0.2);
+              border-radius: 16px;
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(5px);
+              -webkit-backdrop-filter: blur(5px);
+              border: 1px solid rgba(251, 247, 44, 0.3);">
+                  <p style="font-size: 20px; padding-top: 13px; color: rgb(36, 35, 35);">username: "admin", password: "admin"</p>
+              </div>
+              
+              <p style="margin-top: 30px;">When registering a new user as an administrator, you should provide a username for the user. This username will allow the user to access their inbox and 
+                view the generated password that has been assigned to them. The generated password is only temporary and will be used for the user's initial login.</p>
+
+                <div class="div" style=" padding:30px; border-radius:20px; color: rgb(36, 35, 35); background: rgba(91, 251, 253, 0.2);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(91, 251, 253, 0.3);">
+                    <p>List of Role Privileges:</p>
+                    <ul>
+                        <span><li style="font-size:18px; color: rgb(36, 35, 35);">admin</li> <p style="font-size: 15px;">Registering and Assigning Roles to New Users, Creating, Reading, Updating, and Deleting Movies, Actors, and Authors.</p></span> 
+                        <span><li style="font-size:18px; color: rgb(36, 35, 35);">admin-support</li> <p style="font-size: 15px;">Creating, Reading, Updating, and Deleting Movies, Actors, and Authors.</p></span>
+                        <span><li style="font-size:18px; color: rgb(36, 35, 35);">user</li><p style="font-size: 15px;">Reading Movies, Actors, and Authors details.</p></span>
+                       
+                    </ul>
+                </div>
+
+                <p style="margin-top: 30px;">Without further ado, let's try out the GraphQL.</p>
+                <p style="font-size: 13px;">( Click the logo below to access GraphiQL )</p>
+                <div class="div" style="margin-top: 20px;">
+                    <a class="btn btn-lg" href="/graphiql" target="_blank" role="button"><img src="https://img.icons8.com/external-tal-revivo-fresh-tal-revivo/256/external-graphql-an-open-source-data-query-and-manipulation-language-for-api-logo-fresh-tal-revivo.png" alt="Personal Web Link" style="height: 70px; opacity: 0.7;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';"></a>
+                </div>
+            </div>
+          </div>
+</html>

@@ -95,6 +95,10 @@ class AuthControllers {
       const generatedPassword = uuidv4().replace(/-/g, "");
       const message = `password given:  ${generatedPassword}  , don't forget to change your password`;
 
+      if (args.username == "admin") {
+        throw new InputValidationError("Cannot register admin", "id", 403);
+      }
+
       const salt = await bcrypt.genSaltSync(10);
       const hashedPassword = await bcrypt.hashSync(generatedPassword, salt);
 

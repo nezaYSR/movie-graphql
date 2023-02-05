@@ -1,4 +1,16 @@
 services:
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
   movie_graphql:
     restart: unless-stopped
     container_name: 'movie_graphql'
@@ -9,13 +21,5 @@ services:
       - '3000:3000'
     links:
       - postgres
-  
-  postgres:
-    container_name: postgres_container
-    image: postgres
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-    ports:
-      - "0.0.0.0:5432:5432"
-    restart: unless-stopped
+    depends_on:
+      - postgres

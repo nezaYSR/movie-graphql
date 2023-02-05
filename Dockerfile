@@ -1,15 +1,7 @@
-FROM node:12.17.0-alpine
-WORKDIR /usr
-COPY package.json ./
-COPY tsconfig.json ./
-COPY src ./src
-RUN ls -a
-RUN npm install
-RUN npm run build
-
-## this is stage two , where the app actually runs
-FROM node:12.17.0-alpine
-WORKDIR /usr
-COPY package.json ./
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install --force
+COPY . ./
 EXPOSE 3000
-CMD ["node","src/server.js"]
+CMD ["npm","run","dev"]

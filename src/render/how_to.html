@@ -1,0 +1,140 @@
+<html lang="en">
+  <head>
+    <title>GraphQL Movie API - Made by nezaysr</title>
+    <meta
+      name="description"
+      content="Discover the latest and greatest movies with our GraphQL Movie API. Get detailed information, ratings, and reviews for your favorite films."
+    />
+    <meta
+      name="keywords"
+      content="GraphQL, movie API, movies, film database, ratings, reviews"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/stickers/256/cinema-ticket.png">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body>
+    <div style="margin:100px;" class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <a class="navbar-brand" href="/graphql">Movie GraphQL Home</a>
+            <ul class="nav navbar-nav">
+              <li >
+                <a href="/graphql">Home</a>
+              </li>
+              <li class="active">
+                <a href="/howto">How To</a>
+              </li>
+              <li >
+                <a href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+            <div class="jumbotron"  style="padding:40px;">
+              <h1>How to Run</h1>
+
+              <p>
+                The app can be running locally after cloning the repo from Github  
+              </p>
+
+              <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                  <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">git clone https://github.com/nezaYSR/movie-graphql.git</p>
+              </div>
+
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Running via CLI
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <p style="font-size: 15px;">Add git remote locally</p>
+                       
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">git remote add <em>{{remote}}</em> https://github.com/nezaYSR/movie-graphql.git</p>
+                        </div>
+
+                        <p style="font-size: 15px;">Pull the latest of branch main (assuming there's no development/sit/uat branch)</p>
+                       
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">git pull <em>{{remote}}</em> main</p>
+                        </div>
+
+                        <p style="font-size: 15px;">If you want to run the development server, you can find the other scripts in the <strong>package.json</strong> file located in the root folder.</p>
+                       
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">npm run dev</p>
+                        </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Docker and Docker Compose
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <p style="font-size: 15px;">Make sure that Docker and Docker Compose are installed on your machine.</p>
+                       
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">docker -v </p>
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; margin-top: -10px; color: rgb(152, 151, 151)">Docker version 20.10.14, build a224086 </p>
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">docker-compose -v </p>
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; margin-top: -10px; color: rgb(152, 151, 151);">docker-compose version 1.29.2, build 5becea4c </p>
+                        </div>
+                    
+                        <p style="font-size: 15px;">Then, you can run the <strong>docker-compose</strong> command or easily click the toggle button from the Docker Desktop app.</p>
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">docker-compose up -d </p>
+                        </div>
+                    
+                        <p style="font-size: 15px;">Make sure that no other application is running on port 3000 and 5432. If it is, you can manually change the EXPOSE port in the Dockerfile located in the root folder.</p>
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">netstat -a -n -o|find '3000'</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Running Unit Test
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <div class="div" style="width:600px; border-radius: 15px; padding: 5px; background-color: rgb(34, 34, 34); margin-bottom: 30px;">
+                            <p style="font-size: 13px; padding-left: 20px; padding-top: 13px; color: rgb(255, 255, 255);">npm run test</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <p>
+                You can access the GraphQL on Firebase too  
+              </p>
+
+              <div class="div" style="margin-top: 50px;">
+                <a class="btn btn-lg" href="https://nezaysr.tech" target="_blank" role="button"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-fireball-of-meteorite-with-flash-of-fire-astronomy-shadow-tal-revivo.png" alt="Personal Web Link" style="height: 60px; opacity: 0.7;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';"></a>
+              </div>
+            </div>
+          </div>
+</html>

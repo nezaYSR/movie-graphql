@@ -25,6 +25,10 @@ app.get("/graphql", (req, res) => {
   res.sendFile(path.join(__dirname + "/render/" + "/index.html"));
 });
 
+app.get("/howto", (req, res) => {
+  res.sendFile(path.join(__dirname + "/render/" + "/how_to.html"));
+});
+
 app.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname + "/render/" + "/about.html"));
 });

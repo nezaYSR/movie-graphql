@@ -8,10 +8,6 @@ export const ormConnection = async () => {
       await connection.runMigrations();
       console.log("Connected to the database!");
       break;
-
-      // .catch((error) => {
-      //   console.log("Error connecting to the database: ", error);
-      // });
     } catch (error) {
       console.log(error);
       retries -= 1;
